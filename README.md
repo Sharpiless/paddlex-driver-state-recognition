@@ -10,8 +10,9 @@ paddlex-baseddriver face detection and state recognition
 
 最终效果：
 
+![image](https://github.com/Sharpiless/paddlex-driver-state-recognition/blob/master/QQ%E6%88%AA%E5%9B%BE20200602234019.jpg)
 
-PaddleX工具简介
+# PaddleX工具简介
 
 PaddleX+是飞桨全流程开发工具，集飞桨核心框架、模型库、工具及组件等深度学习开发所需全部能力于一身，打通深度学习开发全流程，并提供简明易懂的Python API，方便用户根据实际生产需求进行直接调用或二次开发，为开发者提供飞桨全流程开发的最佳实践。目前，该工具代码已开源于GitHub，同时可访问PaddleX在线使用文档，快速查阅使用教程和API文档说明。
 
@@ -26,7 +27,7 @@ PaddleX官网链接：https://www.paddlepaddle.org.cn/paddle/paddlex
 
 对于图像分类任务，针对不同的应用场景，PaddleX支持近20种图像分类模型，模型列表可参考PaddleX模型库：https://paddlex.readthedocs.io/zh_CN/latest/appendix/model_zoo.html
 
-数据集简介
+# 数据集简介
 
 数据集地址：https://www.kaggle.com/c/state-farm-distracted-driver-detection
 
@@ -43,7 +44,7 @@ PaddleX官网链接：https://www.paddlepaddle.org.cn/paddle/paddlex
     'c8': '整理头发',    
     'c9': '跟乘客说话'
 
-MobileNetv3简介：
+# MobileNetv3简介：
 
 论文《Searching for MobileNet V3》地址：https://arxiv.org/abs/1804.02767
 
@@ -77,14 +78,14 @@ model.evaluate(eval_dataset, batch_size=1, epoch_id=None, return_details=False)
 
 7.进行模型量化部署
 
-# 进行模型量化并保存量化模型
+进行模型量化并保存量化模型
 
 pdx.slim.export_quant_model(model, eval_dataset, save_dir='./quant_mobilenet')
 
 print('done.')
 
 
-# 加载量化模型并进行评估
+加载量化模型并进行评估
 
 quant_model = pdx.load_model('./quant_mobilenet')
 
@@ -108,25 +109,38 @@ quant_model.evaluate(eval_dataset, batch_size=1, epoch_id=None, return_details=F
 
 小结
 
-1.本项目使用PaddleX提供的高层接口，快速、高效地完成了驾驶员状态识别的模型训练和部署。通过Python API方式完成全流程使用或集成，该模型提供全面、灵活、开放的深度学习功能，有更高的定制化空间以及更低门槛的方式快速完成产业模型部署,并提供了应用层的软件和可视化服务。
+本项目使用PaddleX提供的高层接口，快速、高效地完成了驾驶员状态识别的模型训练和部署。通过Python API方式完成全流程使用或集成，该模型提供全面、灵活、开放的深度学习功能，有更高的定制化空间以及更低门槛的方式快速完成产业模型部署,并提供了应用层的软件和可视化服务。
 
-2.基于PaddleX开发了驾驶员状态识别模型，并结合
+
 关于作者：
+
 北京理工大学 大二在读
+
 感兴趣的方向为：目标检测、人脸识别、EEG识别等
-将会定期分享一些小项目，感兴趣的朋友可以互相关注一下：主页链接
-也欢迎大家fork、评论交流
+
 作者博客地址：https://blog.csdn.net/weixin_44936889
+
 更多资源：
+
 更多PaddleX的应用方法，欢迎访问项目地址：
+
 GitHub: https://github.com/PaddlePaddle/PaddleX
+
 Gitee: https://gitee.com/paddlepaddle/PaddleX
+
 如果您加入官方QQ群，您将遇上大批志同道合的深度学习同学。
+
 飞桨PaddleX技术交流QQ群：1045148026
 
 飞桨官方QQ群：703252161。
+
+
 如果您想详细了解更多飞桨的相关内容，请参阅以下文档。
+
 官网地址：https://www.paddlepaddle.org.cn
+
 飞桨开源框架项目地址：
+
 GitHub: https://github.com/PaddlePaddle/Paddle
+
 Gitee:  https://gitee.com/paddlepaddle/Paddle
